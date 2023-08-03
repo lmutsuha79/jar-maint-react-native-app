@@ -18,6 +18,8 @@ export const en = {
     "Get the best deals tailored for you!",
   "Discover exciting offers and discounts on our home maintenance services":
     "Discover exciting offers and discounts on our home maintenance services",
+  next: "Next",
+  skip: "Skip",
   welcome: "welcome back",
   appName: "Jar Bricole",
   specialOffrs: "Special offrs",

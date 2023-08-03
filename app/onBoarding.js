@@ -1,13 +1,20 @@
-import { View, Text, Image, Dimensions } from "react-native";
+import { View, Text, Image, Dimensions, TouchableOpacity } from "react-native";
 import React from "react";
-import { Stack } from "expo-router";
+import { Stack, router } from "expo-router";
 import Onboarding from "react-native-onboarding-swiper";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { i18n } from "../util/tranlation";
+import FontAwesome5Icon from "react-native-vector-icons/FontAwesome5";
+import { storeData } from "../util/storeData";
 
 export default function onBoardin() {
   const windowWidth = Dimensions.get("window").width;
   const windowHeight = Dimensions.get("window").height;
+  const handleDone = async () => {
+    await storeData("onBoardingAllreadyVisited", "1");
+    router.push("/auth");
+    
+  };
   return (
     <>
       <Stack.Screen
@@ -16,6 +23,9 @@ export default function onBoardin() {
         }}
       />
       <Onboarding
+        onDone={handleDone}
+        nextLabel={i18n.t("next")}
+        skipLabel={i18n.t("skip")}
         pages={[
           {
             backgroundColor: "#285482",
