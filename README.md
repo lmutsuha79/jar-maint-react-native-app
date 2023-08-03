@@ -35,19 +35,10 @@ The Home Maintenance Services App is a mobile application that offers a seamless
 
 To run the app locally and test it on your device, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/your-repo.git`
+1. Clone the repository: `git clone https://github.com/lmutsuha79 jar-maint-react-native-app`
 2. Install dependencies: `npm install` or `yarn install`
-3. [Add any specific steps to set up the development environment]
-4. Run the app: `react-native run-android` or `react-native run-ios`
+3. Run the app: `yarn start` or `npm start`
 
 ## Contributions
 
 We welcome contributions to improve the Home Maintenance Services App. If you have any ideas, bug fixes, or feature suggestions, please feel free to open an issue or submit a pull request.
-
-## License
-
-[Include the license information for your project]
-
-## Contact
-
-For any inquiries or support, please reach out to [your email address or contact information].
