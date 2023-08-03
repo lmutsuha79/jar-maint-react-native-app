@@ -1,5 +1,10 @@
 {
   "expo": {
+    "scheme": "myapp",
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
+    },
     "name": "react_native_learning_project",
     "slug": "react_native_learning_project",
     "version": "1.0.0",
@@ -23,8 +28,9 @@
         "backgroundColor": "#ffffff"
       }
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "plugins": [
+      "expo-router",
+      "expo-localization"
+    ]
   }
 }
