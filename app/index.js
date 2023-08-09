@@ -38,8 +38,14 @@ export default function Page() {
     return <Redirect href={"/onBoarding"} />;
   }
   return (
+    // <Redirect href="(auth)/login"/>
     <View>
       <Text>hello world </Text>
+      {/* <Link href="(auth)/signin">Login</Link> */}
+      <Link className="text-lg" href="screens/profile">profile</Link>
+      <Link className="text-lg mt-10" href="(auth)/sign-in">login</Link>
+      <Link className="text-lg mt-10" href="(auth)/sign-up">singup</Link>
     </View>
   );
 }
+
