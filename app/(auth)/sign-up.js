@@ -85,6 +85,7 @@ export default function SignUp() {
 
             {/* password */}
             <TextInput
+            secureTextEntry
               className="w-full bg-white border border-slate-200 rounded-md h-12 px-4"
               placeholderTextColor="#285482"
               placeholder={i18n.t("Enter password")}
@@ -94,6 +95,7 @@ export default function SignUp() {
 
             {/* confirme password */}
             <TextInput
+            secureTextEntry
               className="w-full bg-white border border-slate-200 rounded-md h-12 px-4"
               placeholderTextColor="#285482"
               placeholder={i18n.t("Confirme the password")}

@@ -1,5 +1,7 @@
 import { router, useSegments } from "expo-router";
 import React, { useEffect } from "react";
+import { FIREBASE_AUTH } from "../firebaseConfig";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 const AuthContext = React.createContext(null);
 
@@ -33,16 +35,29 @@ export function Provider(props) {
 
   useProtectedRoute(user);
 
+  const signIn = async (email, password) => {
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        FIREBASE_AUTH,
+        email,
+        password
+      );
+      const user = userCredential.user;
+      return { user, error: null };
+    } catch (error) {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      return { user: null, error: error };
+    }
+  };
+
   return (
     <AuthContext.Provider
       value={{
-        signIn: () => {
-          console.log("Signing in");
-        },
+        signIn: signIn,
         singOut: () => {
           console.log("Signing out");
         },
-        name: "jiji"
       }}
     >
       {props.children}

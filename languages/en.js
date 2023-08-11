@@ -1,4 +1,5 @@
 export const en = {
+  "Loading": "Loading",
   discoverNow: "Discover Now",
   "Find Your On-Demand Service Worker": "Find Your On-Demand Service Worker",
   "We provide better service for you with our on-demand service app":

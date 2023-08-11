@@ -9,6 +9,7 @@ export default function Root() {
           headerShown: false,
         }}
       />
+      
       <Slot />
     </Provider>
   );
